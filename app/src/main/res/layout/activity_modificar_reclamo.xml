@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundLayout"
+    tools:context=".ui.agregarReclamo.AgregarReclamoFragment">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarMod"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/backArrowIcon"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start|center_vertical"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/icono_flecha_atras"
+                app:layout_anchorGravity="center|center_vertical" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_toolbar_center2"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:background="@drawable/toolbar_center_layout"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/toolbarTitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/logoutButton1"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:layout_gravity="end|center_vertical"
+                android:contentDescription="@string/todo"
+                android:text="@string/cerrar_sesion"
+                android:src="@drawable/icono_salir"
+                app:layout_anchorGravity="center|center_vertical"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/LayoutMod"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/background_with_curved_corners"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMod"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <EditText
+            android:id="@+id/editTitulo"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:hint="@string/Titulo"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:layout_marginTop="20dp"
+            android:textColorHint="@color/contrast"
+            android:maxLength="50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editDescripcion"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:hint="@string/descripcion"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            android:maxLength="50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTitulo" />
+
+        <EditText
+            android:id="@+id/editFecha"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="@string/fecha"
+            android:drawableEnd="@drawable/icono_calendar"
+            android:drawablePadding="8dp"
+            android:inputType="date"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDescripcion" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoReclamo"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:entries="@array/tipos_evento_reclamo"
+            android:hint="@string/tipo_de_reclamo"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editFecha" />
+
+        <TextView
+            android:id="@+id/TextSemestre"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/semestre2"
+            android:textSize="15sp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerSemestre"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:entries="@array/Semestre"
+            android:hint="@string/semestre"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTipoReclamo" />
+
+        <EditText
+            android:id="@+id/editFechaRegistro"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:clickable="false"
+            android:focusable="false"
+            android:hint="@string/fecha_de_evento"
+            android:drawableEnd="@drawable/icono_calendar"
+            android:drawablePadding="8dp"
+            android:inputType="date"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            android:maxLength="10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerSemestre" />
+
+        <EditText
+            android:id="@+id/editDocente"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:hint="@string/docente"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            android:maxLength="50"
+            android:digits="aábcdeéfghiíjklmnñoópqrstuúvwxyzAÁBCDEÉFGHIÍJKLMNÑOÓPQRSTUÚVWXYZ "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editFechaRegistro" />
+
+        <EditText
+            android:id="@+id/editCreditos"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
+            android:hint="@string/creditos"
+            android:inputType="phone"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"
+            android:textColorHint="@color/contrast"
+            android:maxLength="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editDocente" />
+
+        <Button
+            android:id="@+id/btnAceptarModificar"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/modificar"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

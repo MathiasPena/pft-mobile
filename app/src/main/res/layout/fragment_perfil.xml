@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.perfil.PerfilFragment"
+    android:background="@color/BackgroundLayout">
+
+    <RelativeLayout
+        android:id="@+id/Perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_with_curved_corners"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:background="@drawable/icon_profile"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/textNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignTop="@id/imageView"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/campoNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/textNombre"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/campoNombre"/>
+
+        <TextView
+            android:id="@+id/textApellido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/apellido"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/campoNombre"/>
+
+        <TextView
+            android:id="@+id/campoApellido"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/textApellido"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/campoApellido"/>
+
+        <TextView
+            android:id="@+id/textUsuario"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_marginTop="15dp"
+            android:text="@string/usuario2"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/campoUsuario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_toEndOf="@+id/textUsuario"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/imageView"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_toEndOf="@id/textUsuario"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/campoUsuario"/>
+
+        <TextView
+            android:id="@+id/textTitulo"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textUsuario"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/rol"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/campoRol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_toEndOf="@+id/textUsuario"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/campoUsuario"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_toEndOf="@id/textUsuario"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/campoRol"
+            android:layout_marginBottom="15dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Perfil2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_with_curved_corners"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Perfil"
+        tools:layout_editor_absoluteX="16dp">
+
+        <TextView
+            android:id="@+id/textDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/datos"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDatos"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/documento"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/campoDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDoc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/campoDoc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/textTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/campoDoc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/telefono"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/campoTelefono"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTelefono"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/campoTelefono"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/campoTelefono"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/email"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/campoEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textEmail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/campoEmail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/textFechaNac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/campoEmail"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:text="@string/fecha_de_nacimiento"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/campoFechaNac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textFechaNac"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/campoFechaNac"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/black"
+            android:layout_marginBottom="100dp"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

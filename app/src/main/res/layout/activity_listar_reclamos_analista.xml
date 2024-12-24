@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedorPrincipal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BackgroundLayout"
+    tools:context=".ui.listarReclamos.ListarReclamosFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_toolbar_center"
+            android:layout_width="160dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/toolbar_center_layout"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/toolbarTitle3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/logoutButton"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/icono_salir"
+            android:text="@string/cerrar_sesion"
+            app:layout_anchorGravity="center|center_vertical" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Contenedor general -->
+    <RelativeLayout
+        android:id="@+id/generalContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="16dp"> <!-- Ajusta el margen según tus necesidades -->
+
+        <!-- Logo -->
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="@dimen/widerecomendation"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:autofillHints=""
+            android:drawableStart="@drawable/icono_buscar"
+            android:drawablePadding="8dp"
+            android:hint="@string/buscar_reclamos"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColorHint="#8D6E63"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </RelativeLayout>
+
+    <!-- Contenedor con fondo de puntas curvas -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/curvedBackgroundContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/background_with_curved_corners"
+        app:layout_constraintBottom_toBottomOf="@+id/contenedorPrincipal"
+        app:layout_constraintTop_toBottomOf="@+id/generalContainer">
+
+        <!-- Campo de texto para el email -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

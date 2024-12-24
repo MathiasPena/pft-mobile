@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_toolbar_center"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/toolbar_center_layout"
+                    android:layout_gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/toolbarTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/logoutButton"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/icono_salir"
+                android:text="@string/cerrar_sesion"
+                app:layout_anchorGravity="center|center_vertical" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- Contenedor de Fragmentos -->
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_vista_principal"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/nav_view"
+        app:navGraph="@navigation/mobile_navigation"
+        tools:ignore="FragmentTagUsage" />
+
+    <!-- Menú de Navegación (Bottom Navigation) -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintTop_toBottomOf="@+id/nav_host_fragment_activity_vista_principal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

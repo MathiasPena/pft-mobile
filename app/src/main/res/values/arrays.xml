@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipos_evento_reclamo">
+        <item>Vinculación con el Medio - VME</item>
+        <item>Utec Innova - APE</item>
+        <item>Optativas</item>
+        <item>Prueba Final</item>
+        <item>Examen</item>
+        <item>Defensa de Proyecto</item>
+        <item></item>
+    </string-array>
+
+        <string-array name="Semestre">
+            <item>1</item>
+            <item>2</item>
+            <item>3</item>
+            <item>4</item>
+            <item>5</item>
+            <item>6</item>
+            <item>7</item>
+            <item>8</item>
+        </string-array>
+
+
+    <string-array name="itr_utec">
+        <item>ITR Suroeste (Fray Bentos)</item>
+        <item>ITR Centro-Sur (Durazno)</item>
+        <item>ITR Norte (Rivera)</item>
+        <item>Paysandú</item>
+        <item>San José</item>
+        <item>Colonia</item>
+        <item>Mercedes</item>
+        <item>Melo</item>
+        <item>Minas</item>
+        <item>Maldonado</item>
+    </string-array>
+</resources>
